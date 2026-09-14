@@ -153,7 +153,7 @@ body.drawer-open{overflow:hidden}
 .yrow{display:flex;align-items:center;gap:14px}
 .ylabel{font-family:var(--disp);font-weight:500;font-size:.72rem;letter-spacing:.12em;color:var(--soft-on-pine);width:64px;flex:0 0 auto;text-transform:uppercase}
 .ycells{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
-.yc{width:16px;height:16px;border-radius:2px;background:rgba(239,238,223,.16)}
+.yc{width:15px;height:15px;border-radius:2px;background:rgba(239,238,223,.16)}
 .yc.hot{background:var(--red);box-shadow:0 0 0 2px rgba(239,238,223,.25)}
 .yledger{border-left:2px solid rgba(239,238,223,.18);padding-left:28px}
 .yledger-title{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--soft-on-pine)}
@@ -162,6 +162,9 @@ body.drawer-open{overflow:hidden}
 .yledger li:last-child{border-bottom:none}
 .yledger b{font-family:var(--disp);font-weight:600;color:var(--red);background:var(--paper-on-pine);border-radius:2px;padding:1px 7px;font-size:.82rem;letter-spacing:.04em;margin-right:9px;white-space:nowrap}
 .yledger .eta{display:block;margin-top:18px;font-style:italic;color:var(--soft-on-pine);font-size:.92rem}
+.fwd{display:inline-block;margin-top:22px;font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.86rem;text-decoration:none;color:var(--red);padding:11px 0}
+.fwd:hover{text-decoration:underline}
+.fwd-onpine{color:#EDAF9F}
 
 /* ============ PRACTICE ============ */
 .practice{padding:110px 0}
@@ -238,7 +241,7 @@ body.drawer-open{overflow:hidden}
   .pacer{width:200px;height:200px}
   .ylabel{width:46px}
   .ycells{gap:3px}
-  .yc{width:6px;height:6px;border-radius:1px}
+  .yc{width:5px;height:5px;border-radius:1px}
   .yc.hot{box-shadow:0 0 0 1px rgba(239,238,223,.3)}
   .tee-sheet thead{position:absolute;left:-9999px;top:auto}
   .tee-sheet td{display:block;border-bottom:none;padding:3px 16px}
@@ -265,8 +268,8 @@ body.drawer-open{overflow:hidden}
   <div class="nav-in">
     <a class="wordmark" href="#top">Pure Shot <b>Mindset</b></a>
     <ul class="nav-links">
-      <li><a href="#day">The Day</a></li>
-      <li><a href="#year">The Year</a></li>
+      <li><a href="#day">The Method</a></li>
+      <li><a href="#year">The Program</a></li>
       <li><a href="#practice">The Practice</a></li>
       <li><a class="btn btn-red nav-cta" href="https://pureshotmindsetgolf.lovable.app/">Start Day 1</a></li>
     </ul>
@@ -283,8 +286,8 @@ body.drawer-open{overflow:hidden}
     <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
   </div>
   <ul class="drawer-links">
-    <li><a href="#day">The Day</a></li>
-    <li><a href="#year">The Year</a></li>
+    <li><a href="#day">The Method</a></li>
+    <li><a href="#year">The Program</a></li>
     <li><a href="#practice">The Practice</a></li>
   </ul>
   <div class="drawer-foot">
@@ -367,12 +370,12 @@ body.drawer-open{overflow:hidden}
   <div class="wrap">
     <div class="year-head">
       <h2>One session a day. All year.</h2>
-      <p>Months one through eleven run thirty days each. Month twelve runs thirty-five. The app keeps the count for you: your streak, your days completed, how deep into the year you are.</p>
+      <p>Months one through eleven run thirty days each. Month twelve runs thirty-five. The red squares are the six days pulled out on the right, sitting where they actually fall in the year. The app keeps the count for you: your streak, your days completed, how deep into the year you are.</p>
     </div>
     <div class="year-body">
       <div class="ygrid" id="ygrid" aria-label="Calendar of all 365 meditation days across twelve months"></div>
       <div class="yledger">
-        <p class="yledger-title">Days pulled from the calendar</p>
+        <p class="yledger-title">The red days, up close</p>
         <ul>
           <li><b>Day 1</b>Weight &amp; contact of the feet · Breath</li>
           <li><b>Day 2</b>General bodily awareness · The visual field</li>
@@ -382,6 +385,7 @@ body.drawer-open{overflow:hidden}
           <li><b>Day 365</b>Breath · Sensations in the hands</li>
         </ul>
         <span class="eta">The pairs keep rotating all year, so no anchor goes stale and no session repeats the last one.</span>
+        <a class="fwd fwd-onpine" href="https://pureshotmindsetgolf.lovable.app/course">Browse all 365 days &rsaquo;</a>
       </div>
     </div>
   </div>
@@ -422,6 +426,7 @@ body.drawer-open{overflow:hidden}
         <p>Four minutes of calming breath work, or three of energizing, your call, then a five-minute focus meditation. After that, the pre-round sheet: today&rsquo;s focus cue, the score you are playing for, the challenge you expect, and your answer to it.</p>
       </div>
     </div>
+    <a class="fwd" href="https://pureshotmindsetgolf.lovable.app/practice">See the practice system in the app &rsaquo;</a>
   </div>
 </section>
 
@@ -444,10 +449,10 @@ body.drawer-open{overflow:hidden}
         <p>A 365-day meditation and mental game program, built for the golf course.</p>
       </div>
       <div class="foot-col">
-        <h3>The Program</h3>
+        <h3>The Site</h3>
         <ul>
-          <li><a href="#day">The Day</a></li>
-          <li><a href="#year">The Year</a></li>
+          <li><a href="#day">The Method</a></li>
+          <li><a href="#year">The Program</a></li>
           <li><a href="#practice">The Practice</a></li>
         </ul>
       </div>
