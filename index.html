@@ -134,7 +134,7 @@ body.drawer-open{overflow:hidden}
 .pacer .p-count{font-family:var(--disp);font-weight:500;font-size:.9rem;color:var(--soft-on-pine)}
 .pacer.inhale{transform:scale(1.14)}
 .pacer-caption{max-width:34ch;text-align:center;font-style:italic;color:var(--muted);font-size:.98rem}
-.day-sec h2,.year h2,.practice h2,.close-band h2{font-size:clamp(1.7rem,3.1vw,2.5rem);font-weight:600}
+.day-sec h2,.year h2,.practice h2,.who h2,.close-band h2{font-size:clamp(1.7rem,3.1vw,2.5rem);font-weight:600}
 .day-copy p{margin-top:20px;color:var(--ink)}
 .day-copy .lead{font-size:1.14rem}
 .anchor-ribbon{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 0;font-family:var(--disp);text-transform:uppercase;letter-spacing:.05em;font-size:.92rem;color:var(--turf)}
@@ -156,6 +156,7 @@ body.drawer-open{overflow:hidden}
 .yc{width:20px;height:20px;border-radius:2px;background:rgba(239,238,223,.16)}
 .yc.hot{background:var(--red);box-shadow:0 0 0 2px rgba(239,238,223,.25)}
 .ynote{margin-top:30px;max-width:60ch;font-style:italic;color:var(--soft-on-pine);font-size:1rem}
+.yl-sm{display:none}
 .fwd{display:inline-block;margin-top:22px;font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.86rem;text-decoration:none;color:var(--red);padding:11px 0}
 .fwd:hover{text-decoration:underline}
 .fwd-onpine{color:#EDAF9F}
@@ -181,14 +182,22 @@ body.drawer-open{overflow:hidden}
 .tool-row p{color:var(--ink)}
 .tool-row p b{font-family:var(--disp);font-weight:600;letter-spacing:.02em}
 
+/* ============ WHO ============ */
+.who{background:var(--paper-deep);padding:90px 0}
+.who-rows{margin-top:30px;max-width:72ch}
+.who-rows p{font-size:1.13rem;line-height:1.7}
+.who-rows p + p{margin-top:20px}
+.who-rows b{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:1.02rem;margin-right:6px}
+
 /* ============ CLOSE ============ */
-.close-band{background:var(--paper-deep);padding:100px 0}
+.close-band{background:var(--pine);padding:100px 0}
+.close-band h2{color:var(--paper-on-pine)}
 .close-in{max-width:680px;margin:0 auto;text-align:center;padding:0 28px}
-.close-band p{margin-top:20px;font-size:1.18rem;color:var(--muted)}
+.close-band p{margin-top:20px;font-size:1.18rem;color:var(--soft-on-pine)}
 .close-band .btn{margin-top:32px;padding:17px 42px;font-size:1rem}
 
 /* ============ FOOTER ============ */
-.site-foot{background:var(--pine);color:var(--paper-on-pine);padding:64px 0 0}
+.site-foot{background:var(--pine);color:var(--paper-on-pine);padding:64px 0 0;border-top:1px solid rgba(239,238,223,.16)}
 .foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:44px;padding-bottom:48px}
 .foot-brand .wordmark{color:var(--paper-on-pine);font-size:1.4rem}
 .foot-brand p{margin-top:14px;color:var(--soft-on-pine);font-size:.98rem;max-width:34ch}
@@ -216,27 +225,35 @@ body.drawer-open{overflow:hidden}
   :root{--nav-h:60px}
   .nav-links{display:none}
   .hamburger{display:block}
-  .hero{padding:calc(var(--nav-h-sm) + 28px) 0 120px}
+  .hero{padding:calc(var(--nav-h-sm) + 26px) 0 64px}
   .hero h1{font-size:clamp(2.05rem,8.4vw,2.6rem)}
   .hero-sub{font-size:1.04rem}
   .hero-in{display:flex;flex-direction:column;flex-wrap:nowrap;gap:0}
   .hero-copy{display:contents}
   .hero h1{order:1}
   .hero-sub{order:2;margin-top:16px}
-  .hero-ctas{order:3;margin-top:24px}
+  .hero-ctas{order:3;margin-top:24px;flex-direction:column;flex-wrap:nowrap;gap:12px}
+  .hero-ctas .btn{width:100%;min-width:0}
   .hero-note{order:4;margin-top:14px}
-  .hero-photo{order:5;margin-top:30px;width:100%}
-  .photo-plate img{height:238px;object-fit:cover;object-position:center 62%}
-  .day-card{left:14px;right:14px}
-  .band{padding:150px 0 64px}
+  .hero-photo{order:5;margin-top:32px;width:100%}
+  .photo-plate img{height:230px;object-fit:cover;object-position:center 62%}
+  .day-card{position:relative;left:auto;right:auto;bottom:auto;transform:none;margin:-16px 12px 0}
+  .band{padding:64px 0 60px}
   .band-prose{font-size:1.13rem}
-  .day-sec,.practice{padding:72px 0}
-  .year{padding:72px 0 84px}
+  .day-sec,.practice{padding:64px 0}
+  .who{padding:60px 0}
+  .close-band{padding:64px 0}
+  .year{padding:64px 0 72px}
   .pacer{width:200px;height:200px}
-  .ylabel{width:46px}
-  .ycells{gap:3px}
-  .yc{width:5px;height:5px;border-radius:1px}
+  .ygrid{gap:12px}
+  .yrow{gap:10px;align-items:flex-start}
+  .ylabel{width:26px;padding-top:2px}
+  .yl-full{display:none}
+  .yl-sm{display:inline}
+  .ycells{display:grid;grid-template-columns:repeat(15,minmax(0,1fr));gap:3px;flex:1;min-width:0}
+  .yc{width:auto;height:auto;aspect-ratio:1/1;max-width:100%;border-radius:2px}
   .yc.hot{box-shadow:0 0 0 1px rgba(239,238,223,.3)}
+  .ynote{font-size:.95rem}
   .tool-row{grid-template-columns:38px minmax(0,1fr);gap:8px 16px;padding:24px 0}
   .tool-row .ph-num{grid-row:span 2;font-size:1.2rem}
   .tool-row p{grid-column:2}
@@ -296,8 +313,8 @@ body.drawer-open{overflow:hidden}
 <section class="hero" id="top">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <h1>Your swing gets daily reps. Now your <em>head</em> does too.</h1>
-      <p class="hero-sub">Level Up is a <strong>365-day mental game program</strong> for golfers. A short guided meditation every day. A library of your own best shots. An incantation in your own voice. And a routine for every round you play: planned, played, and reviewed.</p>
+      <h1>The most variable sport in the world, <em>organized</em>.</h1>
+      <p class="hero-sub">Level Up is a <strong>complete training structure for competitive golfers</strong>: a 365-day mental program, practice you score and own, and a plan around every round you play. Built by an aspiring professional who needed it to exist.</p>
       <div class="hero-ctas">
         <a class="btn btn-red" href="https://levelupperformanceapp.lovable.app/auth">Start Day 1</a>
         <a class="btn btn-ghost" href="#year">See the Whole Year</a>
@@ -324,8 +341,8 @@ body.drawer-open{overflow:hidden}
 <section class="band">
   <div class="wrap band-in">
     <div class="band-prose">
-      <p>You hit it fine on the range. Then the first tee has trees left, water right, three people watching, and your practice swing belongs to somebody else.</p>
-      <p>That gap is not your swing. You have spent years training the swing and never a day training the thing that runs it under pressure: your attention. It trains the same way a swing does. A little of it, every day, on purpose.</p>
+      <p>No two rounds of golf are the same. Different course, different wind, different pins, different you. Most players answer that variability with improvisation: range balls without a score, practice without a plan, rounds with no review.</p>
+      <p>Level Up answers it with structure. Every day planned, every practice scored, every round reviewed, and a mental program that runs the whole year underneath it. Not motivation. Organization.</p>
     </div>
     <div class="quote-card">
       <p class="quote-label">Quote of the day</p>
@@ -379,13 +396,13 @@ body.drawer-open{overflow:hidden}
   <div class="wrap">
     <div class="practice-head">
       <h2>Built around the whole round, not just the swing.</h2>
-      <p>A round is won three times: before it, during it, and after it. The program wraps all three, so the work you do on a quiet Tuesday is standing next to you on the first tee Saturday.</p>
+      <p>A round is won three times: before it, during it, and after it. The program covers all three, in one place, instead of a notes app, a range bucket, and your memory.</p>
     </div>
     <div class="tools">
       <div class="tool-row">
         <span class="ph-num">01</span>
         <h3>Plan the <span>day</span></h3>
-        <p>Answer a few quick questions: tee time, practice, gym, meditation, even breakfast. The app builds your whole schedule around the round, so the day carries you to the tee instead of scattering you on the way there.</p>
+        <p>Answer a few quick questions: tee time, practice, gym, meditation, even breakfast, and the app builds the day's schedule around the round. Daily plans, a week view, and your tournament schedule, so the season is organized down to the morning of.</p>
       </div>
       <div class="tool-row">
         <span class="ph-num">02</span>
@@ -395,7 +412,7 @@ body.drawer-open{overflow:hidden}
       <div class="tool-row">
         <span class="ph-num">03</span>
         <h3>On the <span>course</span></h3>
-        <p>A pre-shot routine you have rehearsed against the clock until it is yours, one focus cue, and an honest mark on every shot: committed, or not. On practice days, six scored drills keep the work from lying to you.</p>
+        <p>A pre-shot routine rehearsed against the clock until it is yours, one focus cue, and an honest mark on every shot: committed, or not. On practice days, six scored drills with best scores and two-week averages, so practice has a number attached.</p>
       </div>
       <div class="tool-row">
         <span class="ph-num">04</span>
@@ -420,11 +437,23 @@ body.drawer-open{overflow:hidden}
   </div>
 </section>
 
+<!-- WHO -->
+<section class="who" id="who">
+  <div class="wrap">
+    <h2>Built for people who take this seriously.</h2>
+    <div class="who-rows">
+      <p><b>Players.</b> Own your practice. Your drills, your scores, your commitment marks, your review. Nobody has to make you do it, which is the point.</p>
+      <p><b>Coaches.</b> One structure to hand every player: the same practice language, the same drills, the same sheets. What happened between lessons stops being a mystery.</p>
+      <p><b>Juniors &amp; high school players.</b> A schedule a fifteen-year-old can run without being chased: plan the day, do the session, log the round.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSE -->
 <section class="close-band">
   <div class="close-in">
     <h2>Day 1 is seven minutes.</h2>
-    <p>You do not need a new swing thought this weekend. You need somewhere steadier to put your attention. Start tonight, and bring it to the course by Saturday.</p>
+    <p>The program starts in the same place for a tour player and a junior: Day 1. Three, seven, or thirteen minutes, tonight.</p>
     <a class="btn btn-red" href="https://levelupperformanceapp.lovable.app/auth">Start Day 1</a>
   </div>
 </section>
@@ -518,7 +547,7 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
       row.className = 'yrow';
       var label = document.createElement('span');
       label.className = 'ylabel';
-      label.textContent = 'Month ' + m;
+      label.innerHTML = '<span class="yl-full">Month ' + m + '</span><span class="yl-sm">M' + m + '</span>';
       row.appendChild(label);
       var cells = document.createElement('div');
       cells.className = 'ycells';
