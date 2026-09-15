@@ -148,20 +148,14 @@ body.drawer-open{overflow:hidden}
 .year h2{color:var(--paper-on-pine)}
 .year-head{max-width:62ch}
 .year-head p{margin-top:18px;color:var(--soft-on-pine);font-size:1.1rem}
-.year-body{margin-top:56px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:64px;align-items:start}
-.ygrid{display:flex;flex-direction:column;gap:10px}
-.yrow{display:flex;align-items:center;gap:14px}
-.ylabel{font-family:var(--disp);font-weight:500;font-size:.72rem;letter-spacing:.12em;color:var(--soft-on-pine);width:64px;flex:0 0 auto;text-transform:uppercase}
-.ycells{display:flex;flex-wrap:wrap;gap:4px;min-width:0}
-.yc{width:15px;height:15px;border-radius:2px;background:rgba(239,238,223,.16)}
+.year-body{margin-top:56px;max-width:980px}
+.ygrid{display:flex;flex-direction:column;gap:11px}
+.yrow{display:flex;align-items:center;gap:16px}
+.ylabel{font-family:var(--disp);font-weight:500;font-size:.72rem;letter-spacing:.12em;color:var(--soft-on-pine);width:66px;flex:0 0 auto;text-transform:uppercase}
+.ycells{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.yc{width:20px;height:20px;border-radius:2px;background:rgba(239,238,223,.16)}
 .yc.hot{background:var(--red);box-shadow:0 0 0 2px rgba(239,238,223,.25)}
-.yledger{border-left:2px solid rgba(239,238,223,.18);padding-left:28px}
-.yledger-title{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:var(--soft-on-pine)}
-.yledger ul{list-style:none;margin-top:16px}
-.yledger li{padding:11px 0;border-bottom:1px solid rgba(239,238,223,.12);font-size:.98rem;line-height:1.45}
-.yledger li:last-child{border-bottom:none}
-.yledger b{font-family:var(--disp);font-weight:600;color:var(--red);background:var(--paper-on-pine);border-radius:2px;padding:1px 7px;font-size:.82rem;letter-spacing:.04em;margin-right:9px;white-space:nowrap}
-.yledger .eta{display:block;margin-top:18px;font-style:italic;color:var(--soft-on-pine);font-size:.92rem}
+.ynote{margin-top:30px;max-width:60ch;font-style:italic;color:var(--soft-on-pine);font-size:1rem}
 .fwd{display:inline-block;margin-top:22px;font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.86rem;text-decoration:none;color:var(--red);padding:11px 0}
 .fwd:hover{text-decoration:underline}
 .fwd-onpine{color:#EDAF9F}
@@ -171,18 +165,17 @@ body.drawer-open{overflow:hidden}
 .practice-head{max-width:64ch}
 .practice-head p{margin-top:18px;font-size:1.1rem;color:var(--muted)}
 .practice-head p b{color:var(--ink)}
-.tee-sheet{margin-top:46px;width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:3px;box-shadow:0 12px 30px rgba(15,46,34,.08)}
-.tee-sheet thead th:first-child{border-top-left-radius:3px}
-.tee-sheet thead th:last-child{border-top-right-radius:3px}
-.tee-sheet caption{caption-side:top;text-align:left;font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.11em;font-size:.8rem;color:var(--turf);padding-bottom:12px}
-.tee-sheet th{font-family:var(--disp);font-weight:600;text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;text-align:left;background:var(--pine);color:var(--paper-on-pine);padding:13px 20px}
-.tee-sheet td{padding:15px 20px;border-bottom:1px solid var(--line);vertical-align:top}
-.tee-sheet tr:last-child td{border-bottom:none}
-.tee-sheet .t-name{font-family:var(--disp);font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:.98rem;white-space:nowrap}
-.tee-sheet .t-shots{font-family:var(--disp);font-weight:600;white-space:nowrap;color:var(--red)}
-.tools{margin-top:64px;display:flex;flex-direction:column}
-.tool-row{display:grid;grid-template-columns:minmax(0,.38fr) minmax(0,1fr);gap:40px;padding:34px 0;border-top:1px solid var(--line);align-items:baseline}
+.tools{margin-top:50px;display:flex;flex-direction:column}
+.tool-row{display:grid;grid-template-columns:64px minmax(0,.32fr) minmax(0,1fr);gap:34px;padding:34px 0;border-top:1px solid var(--line);align-items:baseline}
 .tool-row:last-child{border-bottom:1px solid var(--line)}
+.ph-num{font-family:var(--disp);font-weight:600;font-size:1.5rem;color:var(--red);letter-spacing:.04em}
+.belief{margin-top:70px}
+.belief-head{font-family:var(--disp);text-transform:uppercase;font-weight:600;font-size:1.4rem}
+.belief-grid{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.belief-card{background:#fff;border-radius:3px;padding:30px 32px;box-shadow:0 10px 26px rgba(15,46,34,.08)}
+.belief-card h3{font-size:1.22rem;font-weight:600}
+.belief-card h3 span{color:var(--red)}
+.belief-card p{margin-top:12px}
 .tool-row h3{font-size:1.28rem;font-weight:600}
 .tool-row h3 span{color:var(--red)}
 .tool-row p{color:var(--ink)}
@@ -212,9 +205,10 @@ body.drawer-open{overflow:hidden}
 /* ============ RESPONSIVE ============ */
 @media (max-width:1020px){
   .hero-in,.band-in,.day-grid{grid-template-columns:1fr;gap:44px}
-  .year-body{grid-template-columns:1fr;gap:48px}
-  .yledger{border-left:none;padding-left:0;border-top:2px solid rgba(239,238,223,.18);padding-top:28px}
-  .tool-row{grid-template-columns:1fr;gap:10px}
+  .year-body{max-width:none}
+  .tool-row{grid-template-columns:44px minmax(0,1fr);gap:8px 18px}
+  .tool-row .ph-num{grid-row:span 2}
+  .tool-row p{grid-column:2}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-brand{grid-column:1 / -1}
 }
@@ -243,12 +237,12 @@ body.drawer-open{overflow:hidden}
   .ycells{gap:3px}
   .yc{width:5px;height:5px;border-radius:1px}
   .yc.hot{box-shadow:0 0 0 1px rgba(239,238,223,.3)}
-  .tee-sheet thead{position:absolute;left:-9999px;top:auto}
-  .tee-sheet td{display:block;border-bottom:none;padding:3px 16px}
-  .tee-sheet tbody tr{display:block;border-bottom:1px solid var(--line);padding:11px 0 13px}
-  .tee-sheet tbody tr:last-child{border-bottom:none}
-  .tee-sheet .t-name{padding-top:9px}
-  .tool-row{padding:24px 0}
+  .tool-row{grid-template-columns:38px minmax(0,1fr);gap:8px 16px;padding:24px 0}
+  .tool-row .ph-num{grid-row:span 2;font-size:1.2rem}
+  .tool-row p{grid-column:2}
+  .belief{margin-top:52px}
+  .belief-grid{grid-template-columns:1fr;gap:16px}
+  .belief-card{padding:24px 22px}
   .practice-head p{font-size:1.02rem}
   .close-band{padding:72px 0}
   .foot-grid{gap:30px;padding-bottom:36px}
@@ -270,7 +264,7 @@ body.drawer-open{overflow:hidden}
     <ul class="nav-links">
       <li><a href="#day">The Method</a></li>
       <li><a href="#year">The Program</a></li>
-      <li><a href="#practice">The Practice</a></li>
+      <li><a href="#round">The Round</a></li>
       <li><a class="btn btn-red nav-cta" href="https://pureshotmindsetgolf.lovable.app/">Start Day 1</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
@@ -288,7 +282,7 @@ body.drawer-open{overflow:hidden}
   <ul class="drawer-links">
     <li><a href="#day">The Method</a></li>
     <li><a href="#year">The Program</a></li>
-    <li><a href="#practice">The Practice</a></li>
+    <li><a href="#round">The Round</a></li>
   </ul>
   <div class="drawer-foot">
     <a class="btn btn-red" href="https://pureshotmindsetgolf.lovable.app/">Start Day 1</a>
@@ -303,7 +297,7 @@ body.drawer-open{overflow:hidden}
   <div class="wrap hero-in">
     <div class="hero-copy">
       <h1>Your swing gets daily reps. Now your <em>head</em> does too.</h1>
-      <p class="hero-sub">Pure Shot is a <strong>365-day mental game program</strong> for golfers. One short guided meditation every day, at 3, 7, or 13 minutes, your pick. Six scored practice drills. And a pre-shot routine you rehearse until it holds up with a card in your hand.</p>
+      <p class="hero-sub">Pure Shot is a <strong>365-day mental game program</strong> for golfers. A short guided meditation every day. A library of your own best shots. An incantation in your own voice. And a routine for every round you play: planned, played, and reviewed.</p>
       <div class="hero-ctas">
         <a class="btn btn-red" href="https://pureshotmindsetgolf.lovable.app/">Start Day 1</a>
         <a class="btn btn-ghost" href="#year">See the Whole Year</a>
@@ -331,7 +325,7 @@ body.drawer-open{overflow:hidden}
   <div class="wrap band-in">
     <div class="band-prose">
       <p>You hit it fine on the range. Then the first tee has trees left, water right, three people watching, and your practice swing belongs to somebody else.</p>
-      <p>That gap is not your swing. It is attention. And attention trains the same way a swing does: a little of it, every day, on purpose.</p>
+      <p>That gap is not your swing. You have spent years training the swing and never a day training the thing that runs it under pressure: your attention. It trains the same way a swing does. A little of it, every day, on purpose.</p>
     </div>
     <div class="quote-card">
       <p class="quote-label">Quote of the day</p>
@@ -370,63 +364,59 @@ body.drawer-open{overflow:hidden}
   <div class="wrap">
     <div class="year-head">
       <h2>One session a day. All year.</h2>
-      <p>Months one through eleven run thirty days each. Month twelve runs thirty-five. The red squares are the six days pulled out on the right, sitting where they actually fall in the year. The app keeps the count for you: your streak, your days completed, how deep into the year you are.</p>
+      <p>Every square is a session. Months one through eleven run thirty days each; month twelve runs thirty-five. The app keeps the count for you: your streak, your days completed, how deep into the year you are. The only square you ever need to think about is the red one.</p>
     </div>
     <div class="year-body">
-      <div class="ygrid" id="ygrid" aria-label="Calendar of all 365 meditation days across twelve months"></div>
-      <div class="yledger">
-        <p class="yledger-title">The red days, up close</p>
-        <ul>
-          <li><b>Day 1</b>Weight &amp; contact of the feet · Breath</li>
-          <li><b>Day 2</b>General bodily awareness · The visual field</li>
-          <li><b>Day 3</b>Sensations in the hands · Sounds</li>
-          <li><b>Day 10</b>Wind &amp; temperature · Sounds</li>
-          <li><b>Day 180</b>Sensations in the hands · Wind on your body</li>
-          <li><b>Day 365</b>Breath · Sensations in the hands</li>
-        </ul>
-        <span class="eta">The pairs keep rotating all year, so no anchor goes stale and no session repeats the last one.</span>
-        <a class="fwd fwd-onpine" href="https://pureshotmindsetgolf.lovable.app/course">Browse all 365 days &rsaquo;</a>
-      </div>
+      <div class="ygrid" id="ygrid" aria-label="Calendar of all 365 meditation days across twelve months, with Day 1 highlighted"></div>
+      <p class="ynote">Day 1, in red, is where everyone starts. The anchor pairs rotate all year, so no session repeats the one before it, and what the other 364 hold stays between you and the program.</p>
+      <a class="fwd fwd-onpine" href="https://pureshotmindsetgolf.lovable.app/course">Start with Day 1 &rsaquo;</a>
     </div>
   </div>
 </section>
 
-<!-- THE PRACTICE -->
-<section class="practice" id="practice">
+<!-- THE ROUND -->
+<section class="practice" id="round">
   <div class="wrap">
     <div class="practice-head">
-      <h2>The part with a club in your hand.</h2>
-      <p>Meditation is half the program. The other half is a practice system that scores what you control: <b>20 shots at a time</b>, about thirty minutes a drill. The app keeps your best score, your two-week average, and the number that matters most: how many of those shots you were fully committed over.</p>
+      <h2>Built around the whole round, not just the swing.</h2>
+      <p>A round is won three times: before it, during it, and after it. The program wraps all three, so the work you do on a quiet Tuesday is standing next to you on the first tee Saturday.</p>
     </div>
-    <table class="tee-sheet">
-      <caption>The six drills</caption>
-      <thead>
-        <tr><th scope="col">Drill</th><th scope="col">The work</th><th scope="col">Shots</th></tr>
-      </thead>
-      <tbody>
-        <tr><td class="t-name">Short putting test</td><td>4 putts each from 4, 5, 6, 7 and 8 feet, in random order</td><td class="t-shots">20 putts</td></tr>
-        <tr><td class="t-name">Mid-range putting</td><td>4 putts each from 10, 13, 15, 18 and 20 feet, in random order</td><td class="t-shots">20 putts</td></tr>
-        <tr><td class="t-name">Tee shots</td><td>14 drivers, 3 three-woods and 3 long irons, hit into your zones</td><td class="t-shots">20 shots</td></tr>
-        <tr><td class="t-name">Wedges</td><td>Random distances between 70 and 120 yards</td><td class="t-shots">20 wedges</td></tr>
-        <tr><td class="t-name">Irons</td><td>Stock, low and high with the 7, 9 and 5 iron</td><td class="t-shots">20 shots</td></tr>
-        <tr><td class="t-name">Up &amp; downs</td><td>7 easy, 7 medium and 6 hard</td><td class="t-shots">20 up &amp; downs</td></tr>
-      </tbody>
-    </table>
     <div class="tools">
       <div class="tool-row">
-        <h3>The routine <span>timer</span></h3>
-        <p>Write down your pre-shot routine: how you pick a target, how you prime your body, how many steps in, how many looks. Then rehearse it against the clock. <b>First beep,</b> first step toward the ball. <b>Second beep,</b> club goes back. Rep after rep, until the routine you use under pressure is the same one you use on a Tuesday.</p>
+        <span class="ph-num">01</span>
+        <h3>Plan the <span>day</span></h3>
+        <p>Answer a few quick questions: tee time, practice, gym, meditation, even breakfast. The app builds your whole schedule around the round, so the day carries you to the tee instead of scattering you on the way there.</p>
       </div>
       <div class="tool-row">
-        <h3>The commitment <span>tracker</span></h3>
-        <p>Write one focus cue. Then mark every shot you hit: committed, or not. Two weeks of honest marks shows you the pattern, and the pattern is the thing you practice next.</p>
-      </div>
-      <div class="tool-row">
+        <span class="ph-num">02</span>
         <h3>Before you <span>tee off</span></h3>
-        <p>Four minutes of calming breath work, or three of energizing, your call, then a five-minute focus meditation. After that, the pre-round sheet: today&rsquo;s focus cue, the score you are playing for, the challenge you expect, and your answer to it.</p>
+        <p>Breath work to settle you or switch you on, a short focus meditation, and a pre-round sheet: today&rsquo;s focus cue, the score you are playing for, the challenge you expect, and your answer to it, written down before it finds you.</p>
+      </div>
+      <div class="tool-row">
+        <span class="ph-num">03</span>
+        <h3>On the <span>course</span></h3>
+        <p>A pre-shot routine you have rehearsed against the clock until it is yours, one focus cue, and an honest mark on every shot: committed, or not. On practice days, six scored drills keep the work from lying to you.</p>
+      </div>
+      <div class="tool-row">
+        <span class="ph-num">04</span>
+        <h3>After the <span>round</span></h3>
+        <p>Seven minutes of letting the score go. Then the review: your best recovery, the three shots worth keeping, and one lesson that travels to the next round. The score gets released. The learning gets kept.</p>
       </div>
     </div>
-    <a class="fwd" href="https://pureshotmindsetgolf.lovable.app/practice">See the practice system in the app &rsaquo;</a>
+    <div class="belief">
+      <h3 class="belief-head">And between rounds, the belief work.</h3>
+      <div class="belief-grid">
+        <div class="belief-card">
+          <h3>Sensory <span>visualization</span></h3>
+          <p>A library of your own game: your most clutch shots, the rounds you are proudest of, and your top 10 accomplishments in golf. Proof of what you have already done, read back whenever belief needs a lift.</p>
+        </div>
+        <div class="belief-card">
+          <h3>&ldquo;I am the <span>player</span>&rdquo;</h3>
+          <p>An incantation of the golfer you are becoming: disciplined, patient, relentless. You stand up, say it out loud, and record it, so the voice in your head on the back nine is your own.</p>
+        </div>
+      </div>
+    </div>
+    <a class="fwd" href="https://pureshotmindsetgolf.lovable.app/">See the whole system in the app &rsaquo;</a>
   </div>
 </section>
 
@@ -453,7 +443,7 @@ body.drawer-open{overflow:hidden}
         <ul>
           <li><a href="#day">The Method</a></li>
           <li><a href="#year">The Program</a></li>
-          <li><a href="#practice">The Practice</a></li>
+          <li><a href="#round">The Round</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -521,7 +511,7 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
   /* year grid: months 1-11 x 30 days, month 12 x 35 */
   var ygrid = document.getElementById('ygrid');
   if (ygrid) {
-    var hot = {1:true,2:true,3:true,10:true,180:true,365:true};
+    var hot = {1:true};
     var dayNum = 1;
     for (var m = 1; m <= 12; m++) {
       var row = document.createElement('div');
